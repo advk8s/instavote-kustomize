@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
       - name: vote
-        image: schoolofdevops/vote:v12
+        image: schoolofdevops/vote:v13
+        imagePullPolicy: Always
         ports:
         - containerPort: 80

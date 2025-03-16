@@ -1,13 +1,20 @@
 resources:
-  - base/vote-deployment.yaml
-  - base/vote-service.yaml
-  - base/redis-deployment.yaml
-  - base/redis-service.yaml
-  - base/worker-deployment.yaml
-  - base/db-deployment.yaml
-  - base/db-service.yaml
-  - base/result-deployment.yaml
-  - base/result-service.yaml
+- base/vote-deployment.yaml
+- base/vote-service.yaml
+- base/redis-deployment.yaml
+- base/redis-service.yaml
+- base/worker-deployment.yaml
+- base/db-deployment.yaml
+- base/db-service.yaml
+- base/result-deployment.yaml
+- base/result-service.yaml
 
 namespace: dev
 
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    env: dev
+    project: instavote

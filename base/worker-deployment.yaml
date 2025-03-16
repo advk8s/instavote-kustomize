@@ -16,3 +16,4 @@ spec:
       containers:
       - name: worker
         image: schoolofdevops/worker:v12
+        imagePullPolicy: Always
