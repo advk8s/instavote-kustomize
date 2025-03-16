@@ -1,0 +1,13 @@
+resources:
+  - base/vote-deployment.yaml
+  - base/vote-service.yaml
+  - base/redis-deployment.yaml
+  - base/redis-service.yaml
+  - base/worker-deployment.yaml
+  - base/db-deployment.yaml
+  - base/db-service.yaml
+  - base/result-deployment.yaml
+  - base/result-service.yaml
+
+namespace: dev
+
